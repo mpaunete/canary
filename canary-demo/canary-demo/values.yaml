@@ -30,7 +30,6 @@ config:
 
 serviceMonitor:
   enabled: true
-  hostHeader: canary-demo.local
 
 slo:
   availability:
