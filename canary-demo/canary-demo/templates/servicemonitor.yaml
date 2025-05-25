@@ -12,6 +12,9 @@ spec:
   endpoints:
   - port: http
     path: /metrics
+    relabelings:
+      - targetLabel: Host
+        replacement: canary-demo.local
 
 ---
 {{- if .Values.canary.enabled }}
@@ -28,5 +31,8 @@ spec:
   endpoints:
   - port: http
     path: /metrics
+    relabelings:
+      - targetLabel: Host
+        replacement: canary-demo.local
 {{- end }}
 {{- end }}
